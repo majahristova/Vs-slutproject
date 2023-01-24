@@ -1,4 +1,4 @@
-i// JS FÖR FEATURES/SIDA:
+// JS FÖR FEATURES/SIDA:
 
 const btn = document.querySelector("#submit-btn");
 btn.addEventListener("click", postText);
@@ -12,6 +12,8 @@ function postText(event){
     const divs = document.createElement('div');
     document.querySelector("#message-container").append(divs);
     divs.append(userMessage);
+
+    console.log(userMessage)
 
     // displayPost(userMessage);
 }
