@@ -20,7 +20,7 @@
    const db = getDatabase (app);
    console.log(db)
 
-   document.getElementById("btn").addEventListener(  
+   document.getElementById("submit-btn").addEventListener(  
     "click",(event) =>{
         let inputName= document.getElementById("inName").value
         console.log(inputName);
@@ -40,7 +40,7 @@
             const childData = childSnapshot.val();
             console.log(childKey, childData)
     
-        document.getElementById('content').innerHTML += ` <p> ${childKey}</p>`
+        document.getElementById('message-container').innerHTML += ` <p> ${childKey}</p>`
     
     
     });
