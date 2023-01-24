@@ -14,8 +14,7 @@
      messagingSenderId: "793446011804",
      appId: "1:793446011804:web:f61e175c1dd62a3c11ee59"
    };
- 
-   // Initialize Firebase
+
    const app = initializeApp(firebaseConfig);
    const db = getDatabase (app);
    console.log(db)
@@ -25,25 +24,32 @@
         let inputName= document.getElementById("inName").value
         console.log(inputName);
         set( ref(db, inputName) , {
-            dateOfCretion: new Date().toString('yyyy-MM-dd hh:mm:ss'),
+            name: inputName,
+            dateOfCretion: new Date().toString(),
             
-        
         });
     }
     )
 
     
-    
     onValue(ref(db, '/'), (snapshot) => {
+        document.getElementById('message-container').innerHTML = '';
+        let array = [];
+
         snapshot.forEach((childSnapshot) => {
             const childKey = childSnapshot.key;
             const childData = childSnapshot.val();
             console.log(childKey, childData)
-    
-        document.getElementById('message-container').innerHTML += ` <p> ${childKey}</p>`
-    
-    
+            console.log(childData);
+            array.push(childData);
     });
+        array.sort(function(a,b){
+        return new Date(b.dateOfCretion) - new Date(a.dateOfCretion);
+      });
+    array.forEach(e => {
+        document.getElementById('message-container').innerHTML += ` <p> ${e.name}</p>`
+    });
+    console.log("hela arrayn sorterad",array);
 }
 
     );
