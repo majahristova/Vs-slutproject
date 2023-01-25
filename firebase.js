@@ -51,3 +51,14 @@ onValue(ref(db, '/'), (snapshot) => {
 
 });
 
+remove(ref(db, '/')).then(() => {
+    console.log("/");
+})
+
+document.getElementById("delete-btn").addEventListener(
+    "click", (event) => {
+        remove(ref(db, '/')).then(() => {
+
+        })
+
+    });
