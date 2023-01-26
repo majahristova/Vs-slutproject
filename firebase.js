@@ -46,7 +46,7 @@ onValue(ref(db, '/'), (snapshot) => {
         return new Date(b.dateOfCretion) - new Date(a.dateOfCretion);
     });
     array.forEach(e => {
-        document.getElementById('message-container').innerHTML += ` <div> ${e.name}</div>`
+        document.getElementById('message-container').innerHTML += ` <div class="message-bubble"> ${e.name}</div>`
     });
 
 });
