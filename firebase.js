@@ -23,6 +23,7 @@ document.getElementById("submit-btn").addEventListener(
     "click", (event) => {
         let userInput = document.getElementById("user-input").value
         console.log(userInput);
+        document.getElementById("user-input").value = "";
         set(ref(db, userInput), {
             name: userInput,
             dateOfCretion: new Date().toString(),
