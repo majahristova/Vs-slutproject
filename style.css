@@ -18,7 +18,7 @@
     left: 0;
     margin: 0;
     padding: 0;
-    background: rgba(130, 165, 226, 0.8);
+    background: rgba(57, 59, 60, 0.195);
     overflow: hidden;
     z-index: -1;
 }
@@ -258,6 +258,9 @@
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
+    height: 300px;
+    width: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
   .message-header {
@@ -275,6 +278,13 @@
     font-size: 0.8em;
   }
   
+
+
+  .message-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
 /* Text bubble */
 .message-bubble {
@@ -288,3 +298,12 @@
 
 
 /* Feature 1 */
+
+
+
+
+
+/* ===================================footer============================== */
+
+
+
