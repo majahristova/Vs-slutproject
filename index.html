@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,10 @@
     <title>Grupp5</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="featuresforall.css">
-    
+
     <!-- <script src="script.js"></script> -->
 </head>
+
 <body>
     <!-- <nav>
         <div class="container-navbar">
@@ -18,7 +20,9 @@
         </div>
     </nav> -->
     <nav class="navbar">
-        <a class="navbar-link" href="./index.html"><h1 class="logo">TwitterV0.69</h1></a>
+        <a class="navbar-link" href="./index.html">
+            <h1 class="logo">TwitterV0.69</h1>
+        </a>
         <div class="navbar-items">
             <ul class="link-list">
                 <li class="link-item"><a href="index.html">Home</a></li>
@@ -35,17 +39,18 @@
     </nav>
 
     <p id="welcome-text">Välkommen till vår hemsida, du är välkommen att posta ett meddelande!</p>
+    <div class="message-con">
+        <input type="text" id="user-input" />
+        <button id="submit-btn">Submit post</button>
 
-    <input type="text" id="user-input" />
-    <button id="submit-btn">Submit post</button>
-    
-    <br>
-    <br>
-    <button id="delete-btn">Empty thread</button>
-    <h3>Du kan se vad du postat här under:</h3>
-    <div id="message-container"></div>
+        <h3>Du kan se vad du postat här under:</h3>
+        <div id="message-container"></div>
 
-    
+        <button id="delete-btn">Empty thread</button>
+
+    </div>
+
+
     <div id="feature1"></div>
     <div id="feature2"></div>
     <div id="feature3"></div>
@@ -53,31 +58,28 @@
     <div id="feature5"></div>
     <div id="feature6"></div>
 
-    <ul class="background">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-     </ul>
-
-    <footer id="footer-homepage">
-        <div class="socials">
-            <h4 id="footer-title">Platforms:</h4>
-            <a id="github" href="https://github.com/" target="_blank"><img src="" alt=""></a>
-            <a id="instagram" href="https://www.instagram.com/" target="_blank"><img src="" alt=""></a>
-            <a id="twitter" href="https://twitter.com" target="_blank"><img src="" alt=""></a>
-        </div>
-        <div id="copyright">
-            <h6>Copyright© 2023 </h6>
-        </div>
-    </footer>
-
-   
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
     <script src="script.js"></script>
 </body>
 <script src="firebase.js" type="module">
