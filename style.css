@@ -284,6 +284,7 @@
 }
 
 #delete-btn {
+    
     margin-top: 10px;
     cursor: pointer;
 }
@@ -298,17 +299,21 @@
 }
 
 .submit-button {
+    margin-top: 10px;
+    padding: 10px;
     transition: box-shadow 0.5s ease;
     border-radius: 25px;
 }
 
 .submit-button:hover {
-    box-shadow: 0 0 10px #0000FF;
+    color: #f0f0f0;
+    background-color: transparent;
+    box-shadow: 0 0 10px #007AFF;
 }
 
 #delete-btn:hover {
-    background-color: yellow;
-    box-shadow: 0 0 10px yellow;
+    background-color: transparent;
+    box-shadow: 0 0 10px #007AFF;
 }
 
 #welcome-text,
