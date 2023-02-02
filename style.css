@@ -1,14 +1,16 @@
+:root{
+--theme-color: #007aff;
+
+}
+
 @keyframes move {
     100% {
         transform: translate3d(0, 0, 1px) rotate(360deg);
     }
 }
-body{
-
-overflow-x: hidden;
-
+body {
+    overflow-x: hidden;
 }
-
 
 .background {
     position: fixed;
@@ -32,7 +34,6 @@ overflow-x: hidden;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-
 
 .background span:nth-child(0) {
     color: #5e5379;
@@ -234,10 +235,6 @@ overflow-x: hidden;
     box-shadow: 40vmin 0 5.390034612592803vmin currentColor;
 }
 
-
-
-
-
 #message-container {
     display: flex;
     justify-content: space-around;
@@ -245,9 +242,10 @@ overflow-x: hidden;
 
     padding: 10px;
     margin-bottom: 10px;
-   /*  height: 100vh; */
+    /*  height: 100vh; */
     width: 100vw;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .message-header {
@@ -264,8 +262,6 @@ overflow-x: hidden;
     color: #999;
     font-size: 0.8em;
 }
-
-
 
 .message-con {
     display: flex;
@@ -287,21 +283,27 @@ overflow-x: hidden;
     display: inline-block;
     text-align: center;
     overflow: hidden;
+    outline: 0rem solid var(--theme-color);
+    transition-duration: 0.7s;
+}
+
+.message-bubble:hover {
+    outline: 0.3rem solid var(--theme-color);
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #delete-btn {
-    
     margin-top: 10px;
     cursor: pointer;
 }
 
 #submit-btn:hover {
     cursor: pointer;
-
 }
 
 .submit-button:hover {
-    box-shadow: 0 0 10px #0000FF;
+    box-shadow: 0 0 10px #0000ff;
 }
 
 .submit-button {
@@ -314,12 +316,12 @@ overflow-x: hidden;
 .submit-button:hover {
     color: #f0f0f0;
     background-color: transparent;
-    box-shadow: 0 0 10px #007AFF;
+    box-shadow: 0 0 10px #007aff;
 }
 
 #delete-btn:hover {
     background-color: transparent;
-    box-shadow: 0 0 10px #007AFF;
+    box-shadow: 0 0 10px #007aff;
 }
 
 #welcome-text,
@@ -347,25 +349,47 @@ h3 {
     transition: all 0.2s ease-in-out;
 }
 
-#namelogo{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+#namelogo {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     font-size: small;
     transition: all 0.2s ease-in-out;
     white-space: nowrap;
     overflow: hidden;
-
 }
 
 .navbar-link:hover .name-logo {
     color: blue;
-  }
-  .name-logo {
-    transition: all 0.2s ease-in-out;
-    color: #007AFF;
 }
-.logo-container{
+.name-logo {
+    transition: all 0.2s ease-in-out;
+    color: #007aff;
+}
+.logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .message-bubble {
+        color: white;
+        font-weight: bold;
+        background-color: #666;
+    }
+
+    .link-item a {
+        color: rgb(137, 170, 246) !important;
+    }
+    .link-item a:hover {
+        color: var(--theme-color) !important;
+    }
+
+    .navbar,
+    #user-input,
+    submit-btn {
+        background-color: #080936 !important;
+    }
+
+    #submit-btn,#delete-btn,p,h3{ filter:brightness(0.8)}
 }
